@@ -1,0 +1,272 @@
+.qibla-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.separator {
+  color: var(--color-warm);
+}
+
+/* Compass Container */
+.compass-container {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.compass-container.aligned .compass-ring {
+  border-color: var(--color-success);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+/* Permission/Error Prompts */
+.permission-prompt,
+.error-prompt {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-md);
+}
+
+.prompt-icon {
+  color: var(--color-primary);
+}
+
+.prompt-icon.error {
+  color: var(--color-error);
+}
+
+.permission-prompt h3,
+.error-prompt h3 {
+  font-size: 1.125rem;
+}
+
+.permission-prompt p,
+.error-prompt p {
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+}
+
+.manual-direction {
+  margin-top: var(--spacing-md);
+}
+
+/* Compass Ring */
+.compass-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--color-warm);
+  position: relative;
+  transition: all 0.3s ease;
+  background: radial-gradient(circle, var(--color-surface) 0%, var(--color-warm-light) 100%);
+}
+
+.compass-needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 80%;
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+  margin-left: -2px;
+  margin-top: -40%;
+}
+
+.needle-point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-primary);
+}
+
+.kaaba-icon {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+}
+
+/* Cardinal Directions */
+.cardinal {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  transition: transform 0.1s ease-out;
+}
+
+.cardinal.north {
+  top: 8px;
+  left: 50%;
+  margin-left: -15px;
+  color: var(--color-error);
+}
+
+.cardinal.east {
+  right: 8px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.cardinal.south {
+  bottom: 8px;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.cardinal.west {
+  left: 8px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+/* Status Messages */
+.compass-status {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.aligned-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--color-success);
+  color: white;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.direction-hint {
+  color: var(--color-text-light);
+}
+
+.heading-display {
+  text-align: center;
+}
+
+.heading-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.heading-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Instructions */
+.qibla-instructions {
+  width: 100%;
+  max-width: 400px;
+}
+
+.qibla-instructions h4 {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.qibla-instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.qibla-instructions li {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  padding: var(--spacing-xs) 0;
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.qibla-instructions li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+/* Refresh Button */
+.refresh-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--color-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: all 0.2s;
+  margin-left: var(--spacing-sm);
+}
+
+.refresh-btn:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Loading Compass */
+.loading-compass {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}

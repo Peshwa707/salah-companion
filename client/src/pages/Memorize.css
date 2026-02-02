@@ -1,0 +1,472 @@
+/* Progress Card */
+.progress-card {
+  margin-bottom: var(--spacing-lg);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.reset-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background: var(--color-error);
+  color: white;
+}
+
+/* Mode Selector */
+.mode-selector {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+  background: var(--color-warm);
+  padding: 4px;
+  border-radius: var(--radius-md);
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 8px 12px;
+  background: none;
+  color: var(--color-text-light);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.mode-btn.active {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Flashcard */
+.flashcard-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.flashcard {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: var(--spacing-md);
+  border: 2px solid var(--color-warm);
+}
+
+.flashcard.revealed {
+  border-color: var(--color-primary);
+}
+
+.card-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  padding: 4px 10px;
+  background: var(--color-warm);
+  color: var(--color-text-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.flashcard-front {
+  padding: var(--spacing-lg);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-arabic-name {
+  font-family: 'Amiri', serif;
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-when {
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.reveal-btn {
+  width: 100%;
+  max-width: 200px;
+}
+
+.flashcard-back {
+  padding: var(--spacing-md);
+  width: 100%;
+}
+
+.flashcard-back .arabic-text {
+  font-size: 1.375rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.flashcard-back .transliteration {
+  margin-bottom: var(--spacing-sm);
+}
+
+.flashcard-back .translation {
+  margin-bottom: var(--spacing-md);
+}
+
+.times-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--color-secondary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-md);
+}
+
+.hide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--color-warm);
+  color: var(--color-text-light);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+}
+
+/* Navigation */
+.card-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background: var(--color-warm);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.card-counter {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.memorize-btn {
+  width: 100%;
+}
+
+/* No Cards */
+.no-cards {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-light);
+}
+
+/* Quick Reference */
+.quick-reference {
+  margin-top: var(--spacing-xl);
+}
+
+.quick-reference h4 {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.duas-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.dua-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-warm);
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.dua-item:hover {
+  border-color: var(--color-primary);
+}
+
+.dua-item.memorized {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: var(--color-success);
+}
+
+.dua-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.dua-info {
+  flex: 1;
+}
+
+.dua-info .dua-name {
+  display: block;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.dua-info .dua-category {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.check-icon {
+  color: var(--color-success);
+}
+
+/* Stats Card */
+.stats-card {
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.reset-btn-small {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--color-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: all 0.2s;
+}
+
+.reset-btn-small:hover {
+  background: var(--color-error);
+  color: white;
+}
+
+/* SRS Rating Buttons */
+.rating-buttons {
+  margin-bottom: var(--spacing-lg);
+}
+
+.rating-prompt {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.rating-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xs);
+}
+
+.rating-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  background: var(--color-warm);
+  transition: all 0.2s;
+}
+
+.rating-btn span {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.rating-btn small {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+}
+
+.rating-btn.again {
+  color: var(--color-error);
+}
+
+.rating-btn.again:hover {
+  background: var(--color-error);
+  color: white;
+}
+
+.rating-btn.again:hover small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rating-btn.hard {
+  color: var(--color-warning);
+}
+
+.rating-btn.hard:hover {
+  background: var(--color-warning);
+  color: white;
+}
+
+.rating-btn.hard:hover small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rating-btn.good {
+  color: var(--color-success);
+}
+
+.rating-btn.good:hover {
+  background: var(--color-success);
+  color: white;
+}
+
+.rating-btn.good:hover small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rating-btn.easy {
+  color: var(--color-primary);
+}
+
+.rating-btn.easy:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.rating-btn.easy:hover small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Card Stats */
+.card-stats {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+/* No Cards State */
+.no-cards .success-icon {
+  color: var(--color-success);
+  margin-bottom: var(--spacing-md);
+}
+
+.no-cards h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Learning indicators */
+.learning-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-warning);
+  flex-shrink: 0;
+}
+
+.due-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-error);
+  flex-shrink: 0;
+}
+
+.dua-item.learning {
+  background: rgba(245, 158, 11, 0.05);
+  border-color: var(--color-warning);
+}
+
+.dua-item.due {
+  border-left: 3px solid var(--color-error);
+}
+
+/* Disabled Navigation */
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-btn:disabled:hover {
+  background: var(--color-warm);
+  color: var(--color-text);
+}
